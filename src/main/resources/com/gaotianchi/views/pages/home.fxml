@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<SplitPane dividerPositions="0.25" focusTraversable="true" prefHeight="650.0" prefWidth="1000.0" styleClass="split-pane" stylesheets="@../../assets/css/home.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaotianchi.controllers.HomeController">
+<VBox alignment="CENTER" prefHeight="567.0" prefWidth="201.0" styleClass="vbox">
+   <VBox alignment="CENTER" prefHeight="120.0" prefWidth="180.0" spacing="10.0">
+      <Button minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#popUpTransactionForm" prefHeight="40.0" prefWidth="160.0" styleClass="button-common button-primary" text="交易">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../assets/icons/transaction.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#popUpThePurchaseForm" prefHeight="40.0" prefWidth="160.0" styleClass="button-common button-primary" text="进货">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../assets/icons/purchasingGoods.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </VBox>
+   <Line endX="100.0" startX="-100.0" styleClass="line" />
+   <VBox alignment="CENTER" prefHeight="100.0" prefWidth="180.0" spacing="20.0">
+      <Button  fx:id="inventoryButton" mnemonicParsing="false" onAction="#displayBookInventory" prefHeight="40.0" prefWidth="160.0" styleClass="button-common button-secondary" text="库存记录">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../assets/icons/stock.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="84.0" layoutY="86.0" mnemonicParsing="false" onAction="#displayTransactionRecords" prefHeight="40.0" prefWidth="160.0" styleClass="button-common button-secondary" text="交易记录">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../../assets/icons/transactionRecords.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </VBox>
+   <Pane prefHeight="63.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+</VBox>
+<ScrollPane fx:id="scrollPane" styleClass="scroll-pane"  fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" />
+</SplitPane>

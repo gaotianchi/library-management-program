@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox  VBox.vgrow="ALWAYS"  xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaotianchi.controllers.TransactionRecordController">
+    <TableView fx:id="tableView"  VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="159.3333078622818" text="书名">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="transactionQuantityColumn" prefWidth="90.66668701171875" text="交易数量">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stock" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tradingProfitColumn" prefWidth="100" text="交易利润">
+                <cellValueFactory>
+                    <PropertyValueFactory property="costPrice" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="transactionDateColumn" prefWidth="100" text="交易日期">
+                <cellValueFactory>
+                    <PropertyValueFactory property="salePrice" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox style="-fx-padding: 10px 0;">
+        <Pane prefHeight="30.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+        <Button fx:id="previous_page" mnemonicParsing="false" onAction="#previousPage" prefHeight="30.0" prefWidth="80.0" text="上一页" />
+        <Pane prefHeight="30.0" prefWidth="20.0" />
+        <Button fx:id="next_page" mnemonicParsing="false" onAction="#nextPage" prefHeight="30.0" prefWidth="80.0" text="下一页" />
+        <Pane prefHeight="30.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

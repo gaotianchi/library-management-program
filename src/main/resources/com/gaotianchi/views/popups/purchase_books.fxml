@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="300.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gaotianchi.controllers.PurchaseBooksController">
+    <VBox prefHeight="250.0" prefWidth="250.0" style="-fx-padding: 25px 0 25px 0;">
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+            <HBox prefHeight="30.0" prefWidth="250.0">
+                <Label prefHeight="30.0" prefWidth="70.0" text="书名：" />
+                <TextField fx:id="titleField" prefHeight="30.0" prefWidth="180.0" />
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="250.0">
+                <Label prefHeight="30.0" prefWidth="70.0" text="数量：" />
+                <TextField fx:id="quantityField" prefHeight="30.0" prefWidth="90.0" />
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="个" />
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="250.0">
+                <Label prefHeight="30.0" prefWidth="70.0" text="成本价：" />
+                <TextField fx:id="costPriceField" prefHeight="30.0" prefWidth="90.0" />
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="元" />
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="250.0">
+                <Label prefHeight="30.0" prefWidth="70.0" text="售价：" />
+                <TextField fx:id="salePriceField" prefHeight="30.0" prefWidth="90.0" />
+                <Label alignment="CENTER" prefHeight="30.0" prefWidth="30.0" text="元" />
+            </HBox>
+        </VBox>
+        <Pane VBox.vgrow="ALWAYS" />
+        <HBox alignment="BOTTOM_RIGHT" prefHeight="40.0" prefWidth="250.0">
+            <Button mnemonicParsing="false" onAction="#submitForm" prefHeight="40.0" prefWidth="70.0" text="提交" />
+        </HBox>
+    </VBox>
+</HBox>
